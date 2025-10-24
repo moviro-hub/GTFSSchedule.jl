@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Examples · GTFS.jl</title><meta name="title" content="Examples · GTFS.jl"/><meta property="og:title" content="Examples · GTFS.jl"/><meta property="twitter:title" content="Examples · GTFS.jl"/><meta name="description" content="Documentation for GTFS.jl."/><meta property="og:description" content="Documentation for GTFS.jl."/><meta property="twitter:description" content="Documentation for GTFS.jl."/><meta property="og:url" content="https://moviro-hub.github.io/GTFS.jl/examples/"/><meta property="twitter:url" content="https://moviro-hub.github.io/GTFS.jl/examples/"/><link rel="canonical" href="https://moviro-hub.github.io/GTFS.jl/examples/"/><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../search_index.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">GTFS.jl</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li><a class="tocitem" href="../api/">API Reference</a></li><li class="is-active"><a class="tocitem" href>Examples</a><ul class="internal"><li><a class="tocitem" href="#Basic-Data-Exploration"><span>Basic Data Exploration</span></a></li><li><a class="tocitem" href="#Route-Analysis"><span>Route Analysis</span></a></li><li><a class="tocitem" href="#Stop-Analysis"><span>Stop Analysis</span></a></li><li><a class="tocitem" href="#Trip-and-Schedule-Analysis"><span>Trip and Schedule Analysis</span></a></li><li><a class="tocitem" href="#Validation-Examples"><span>Validation Examples</span></a></li><li><a class="tocitem" href="#Advanced-Examples"><span>Advanced Examples</span></a></li><li><a class="tocitem" href="#Data-Export-Examples"><span>Data Export Examples</span></a></li><li><a class="tocitem" href="#Error-Handling-Examples"><span>Error Handling Examples</span></a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Examples</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Examples</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/moviro-hub/GTFS.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/moviro-hub/GTFS.jl/blob/main/docs/src/examples.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Examples"><a class="docs-heading-anchor" href="#Examples">Examples</a><a id="Examples-1"></a><a class="docs-heading-anchor-permalink" href="#Examples" title="Permalink"></a></h1><p>This page provides practical examples of how to use GTFS.jl for common transit data analysis tasks.</p><h2 id="Basic-Data-Exploration"><a class="docs-heading-anchor" href="#Basic-Data-Exploration">Basic Data Exploration</a><a id="Basic-Data-Exploration-1"></a><a class="docs-heading-anchor-permalink" href="#Basic-Data-Exploration" title="Permalink"></a></h2><h3 id="Loading-and-Inspecting-a-GTFS-Feed"><a class="docs-heading-anchor" href="#Loading-and-Inspecting-a-GTFS-Feed">Loading and Inspecting a GTFS Feed</a><a id="Loading-and-Inspecting-a-GTFS-Feed-1"></a><a class="docs-heading-anchor-permalink" href="#Loading-and-Inspecting-a-GTFS-Feed" title="Permalink"></a></h3><pre><code class="language-julia hljs">using GTFS
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Examples · GTFSSchedules.jl</title><meta name="title" content="Examples · GTFSSchedules.jl"/><meta property="og:title" content="Examples · GTFSSchedules.jl"/><meta property="twitter:title" content="Examples · GTFSSchedules.jl"/><meta name="description" content="Documentation for GTFSSchedules.jl."/><meta property="og:description" content="Documentation for GTFSSchedules.jl."/><meta property="twitter:description" content="Documentation for GTFSSchedules.jl."/><meta property="og:url" content="https://moviro-hub.github.io/GTFSSchedules.jl/examples/"/><meta property="twitter:url" content="https://moviro-hub.github.io/GTFSSchedules.jl/examples/"/><link rel="canonical" href="https://moviro-hub.github.io/GTFSSchedules.jl/examples/"/><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../search_index.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">GTFSSchedules.jl</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li><a class="tocitem" href="../api/">API Reference</a></li><li class="is-active"><a class="tocitem" href>Examples</a><ul class="internal"><li><a class="tocitem" href="#Basic-Data-Exploration"><span>Basic Data Exploration</span></a></li><li><a class="tocitem" href="#Route-Analysis"><span>Route Analysis</span></a></li><li><a class="tocitem" href="#Stop-Analysis"><span>Stop Analysis</span></a></li><li><a class="tocitem" href="#Trip-and-Schedule-Analysis"><span>Trip and Schedule Analysis</span></a></li><li><a class="tocitem" href="#Validation-Examples"><span>Validation Examples</span></a></li><li><a class="tocitem" href="#Advanced-Examples"><span>Advanced Examples</span></a></li><li><a class="tocitem" href="#Data-Export-Examples"><span>Data Export Examples</span></a></li><li><a class="tocitem" href="#Error-Handling-Examples"><span>Error Handling Examples</span></a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Examples</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Examples</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/moviro-hub/GTFSSchedules.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/moviro-hub/GTFSSchedules.jl/blob/main/docs/src/examples.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Examples"><a class="docs-heading-anchor" href="#Examples">Examples</a><a id="Examples-1"></a><a class="docs-heading-anchor-permalink" href="#Examples" title="Permalink"></a></h1><p><strong>Practical examples for using GTFSSchedule.jl to analyze transit data.</strong></p><p>This page provides practical examples of how to use GTFSSchedule.jl for common transit data analysis tasks.</p><h2 id="Basic-Data-Exploration"><a class="docs-heading-anchor" href="#Basic-Data-Exploration">Basic Data Exploration</a><a id="Basic-Data-Exploration-1"></a><a class="docs-heading-anchor-permalink" href="#Basic-Data-Exploration" title="Permalink"></a></h2><h3 id="Loading-and-Inspecting-a-GTFS-Feed"><a class="docs-heading-anchor" href="#Loading-and-Inspecting-a-GTFS-Feed">Loading and Inspecting a GTFS Feed</a><a id="Loading-and-Inspecting-a-GTFS-Feed-1"></a><a class="docs-heading-anchor-permalink" href="#Loading-and-Inspecting-a-GTFS-Feed" title="Permalink"></a></h3><pre><code class="language-julia hljs">using GTFSSchedules
+using DataFrames
 
 # Load a GTFS feed
 gtfs = read_gtfs(&quot;transit_feed.zip&quot;)
 
 # Basic information about the feed
 println(&quot;=== GTFS Feed Overview ===&quot;)
-println(&quot;Agencies: &quot;, nrow(gtfs.agency))
-println(&quot;Stops: &quot;, nrow(gtfs.stops))
-println(&quot;Routes: &quot;, nrow(gtfs.routes))
-println(&quot;Trips: &quot;, nrow(gtfs.trips))
-println(&quot;Stop Times: &quot;, nrow(gtfs.stop_times))
+println(&quot;Agencies: &quot;, nrow(gtfs[&quot;agency.txt&quot;]))
+println(&quot;Stops: &quot;, nrow(gtfs[&quot;stops.txt&quot;]))
+println(&quot;Routes: &quot;, nrow(gtfs[&quot;routes.txt&quot;]))
+println(&quot;Trips: &quot;, nrow(gtfs[&quot;trips.txt&quot;]))
+println(&quot;Stop Times: &quot;, nrow(gtfs[&quot;stop_times.txt&quot;]))
 
 # Check for optional files
 optional_files = [
-    (&quot;Calendar&quot;, gtfs.calendar),
-    (&quot;Calendar Dates&quot;, gtfs.calendar_dates),
-    (&quot;Fare Attributes&quot;, gtfs.fare_attributes),
-    (&quot;Shapes&quot;, gtfs.shapes),
-    (&quot;Transfers&quot;, gtfs.transfers),
-    (&quot;Feed Info&quot;, gtfs.feed_info)
+    (&quot;Calendar&quot;, &quot;calendar.txt&quot;),
+    (&quot;Calendar Dates&quot;, &quot;calendar_dates.txt&quot;),
+    (&quot;Fare Attributes&quot;, &quot;fare_attributes.txt&quot;),
+    (&quot;Shapes&quot;, &quot;shapes.txt&quot;),
+    (&quot;Transfers&quot;, &quot;transfers.txt&quot;),
+    (&quot;Feed Info&quot;, &quot;feed_info.txt&quot;)
 ]
 
 println(&quot;\n=== Optional Files ===&quot;)
-for (name, df) in optional_files
-    status = df !== nothing ? &quot;✓ Present ($(nrow(df)) records)&quot; : &quot;✗ Not present&quot;
+for (name, filename) in optional_files
+    if haskey(gtfs, filename) &amp;&amp; gtfs[filename] !== nothing
+        status = &quot;✓ Present ($(nrow(gtfs[filename])) records)&quot;
+    else
+        status = &quot;✗ Not present&quot;
+    end
     println(&quot;$name: $status&quot;)
 end</code></pre><h3 id="Agency-Information"><a class="docs-heading-anchor" href="#Agency-Information">Agency Information</a><a id="Agency-Information-1"></a><a class="docs-heading-anchor-permalink" href="#Agency-Information" title="Permalink"></a></h3><pre><code class="language-julia hljs"># Display all agencies
 println(&quot;=== Transit Agencies ===&quot;)
-for row in eachrow(gtfs.agency)
+for row in eachrow(gtfs[&quot;agency.txt&quot;])
     println(&quot;$(row.agency_name)&quot;)
     println(&quot;  URL: $(row.agency_url)&quot;)
     println(&quot;  Timezone: $(row.agency_timezone)&quot;)
@@ -40,7 +45,7 @@ end</code></pre><h2 id="Route-Analysis"><a class="docs-heading-anchor" href="#Ro
 println(&quot;=== Route Types ===&quot;)
 route_type_names = Dict(
     0 =&gt; &quot;Light Rail&quot;,
-    1 =&gt; &quot;Subway/Metro&quot;, 
+    1 =&gt; &quot;Subway/Metro&quot;,
     2 =&gt; &quot;Rail&quot;,
     3 =&gt; &quot;Bus&quot;,
     4 =&gt; &quot;Ferry&quot;,
@@ -51,8 +56,9 @@ route_type_names = Dict(
     12 =&gt; &quot;Monorail&quot;
 )
 
+routes_df = gtfs[&quot;routes.txt&quot;]
 route_counts = Dict{Int, Int}()
-for row in eachrow(gtfs.routes)
+for row in eachrow(routes_df)
     route_type = row.route_type
     route_counts[route_type] = get(route_counts, route_type, 0) + 1
 end
@@ -61,7 +67,8 @@ for (type_id, count) in sort(collect(route_counts))
     type_name = get(route_type_names, type_id, &quot;Unknown ($type_id)&quot;)
     println(&quot;$type_name: $count routes&quot;)
 end</code></pre><h3 id="Bus-Route-Analysis"><a class="docs-heading-anchor" href="#Bus-Route-Analysis">Bus Route Analysis</a><a id="Bus-Route-Analysis-1"></a><a class="docs-heading-anchor-permalink" href="#Bus-Route-Analysis" title="Permalink"></a></h3><pre><code class="language-julia hljs"># Focus on bus routes
-bus_routes = filter(row -&gt; row.route_type == 3, gtfs.routes)
+routes_df = gtfs[&quot;routes.txt&quot;]
+bus_routes = filter(row -&gt; row.route_type == 3, routes_df)
 
 println(&quot;=== Bus Routes ===&quot;)
 println(&quot;Total bus routes: &quot;, nrow(bus_routes))
@@ -103,14 +110,14 @@ if nrow(stops_with_coords) &gt; 0
     println(&quot;=== Geographic Coverage ===&quot;)
     lats = stops_with_coords.stop_lat
     lons = stops_with_coords.stop_lon
-    
+
     println(&quot;Latitude range: $(minimum(lats)) to $(maximum(lats))&quot;)
     println(&quot;Longitude range: $(minimum(lons)) to $(maximum(lons))&quot;)
-    
+
     # Find stops in a specific area (example: downtown)
-    downtown_stops = filter(row -&gt; 
-        40.7 &lt;= row.stop_lat &lt;= 40.8 &amp;&amp; 
-        -74.0 &lt;= row.stop_lon &lt;= -73.9, 
+    downtown_stops = filter(row -&gt;
+        40.7 &lt;= row.stop_lat &lt;= 40.8 &amp;&amp;
+        -74.0 &lt;= row.stop_lon &lt;= -73.9,
         stops_with_coords
     )
     println(&quot;Stops in downtown area: &quot;, nrow(downtown_stops))
@@ -159,17 +166,17 @@ for (trip_id, count) in longest_trips
     println(&quot;  $trip_id: $count stops&quot;)
 end</code></pre><h2 id="Validation-Examples"><a class="docs-heading-anchor" href="#Validation-Examples">Validation Examples</a><a id="Validation-Examples-1"></a><a class="docs-heading-anchor-permalink" href="#Validation-Examples" title="Permalink"></a></h2><h3 id="Basic-Validation"><a class="docs-heading-anchor" href="#Basic-Validation">Basic Validation</a><a id="Basic-Validation-1"></a><a class="docs-heading-anchor-permalink" href="#Basic-Validation" title="Permalink"></a></h3><pre><code class="language-julia hljs"># Validate the feed
 println(&quot;=== Validation ===&quot;)
-result = validate(gtfs)
+result = GTFSSchedules.Validations.validate_gtfs(gtfs)
 
 println(&quot;Validation result: &quot;, result.summary)
 
 if !result.is_valid
     println(&quot;\nIssues found:&quot;)
-    
+
     # Separate errors and warnings
-    errors = filter(e -&gt; e.severity == :error, result.errors)
-    warnings = filter(e -&gt; e.severity == :warning, result.errors)
-    
+    errors = filter(e -&gt; e.severity == :error, result.messages)
+    warnings = filter(e -&gt; e.severity == :warning, result.messages)
+
     if !isempty(errors)
         println(&quot;\nErrors:&quot;)
         for (i, error) in enumerate(errors[1:min(10, length(errors))])
@@ -179,7 +186,7 @@ if !result.is_valid
             println(&quot;  ... and $(length(errors) - 10) more errors&quot;)
         end
     end
-    
+
     if !isempty(warnings)
         println(&quot;\nWarnings:&quot;)
         for (i, warning) in enumerate(warnings[1:min(10, length(warnings))])
@@ -190,12 +197,12 @@ if !result.is_valid
         end
     end
 end</code></pre><h3 id="Validation-with-Custom-Limits"><a class="docs-heading-anchor" href="#Validation-with-Custom-Limits">Validation with Custom Limits</a><a id="Validation-with-Custom-Limits-1"></a><a class="docs-heading-anchor-permalink" href="#Validation-with-Custom-Limits" title="Permalink"></a></h3><pre><code class="language-julia hljs"># Validate with limited warnings
-result = validate(gtfs; max_warnings_per_file=20)
+result = GTFSSchedules.Validations.validate_gtfs(gtfs)
 println(&quot;Validation with limited warnings: &quot;, result.summary)</code></pre><h2 id="Advanced-Examples"><a class="docs-heading-anchor" href="#Advanced-Examples">Advanced Examples</a><a id="Advanced-Examples-1"></a><a class="docs-heading-anchor-permalink" href="#Advanced-Examples" title="Permalink"></a></h2><h3 id="Finding-Transfer-Opportunities"><a class="docs-heading-anchor" href="#Finding-Transfer-Opportunities">Finding Transfer Opportunities</a><a id="Finding-Transfer-Opportunities-1"></a><a class="docs-heading-anchor-permalink" href="#Finding-Transfer-Opportunities" title="Permalink"></a></h3><pre><code class="language-julia hljs"># Analyze transfers if available
 if gtfs.transfers !== nothing
     println(&quot;=== Transfer Analysis ===&quot;)
     println(&quot;Total transfers: &quot;, nrow(gtfs.transfers))
-    
+
     # Transfer types
     transfer_types = Dict(
         0 =&gt; &quot;Recommended&quot;,
@@ -203,13 +210,13 @@ if gtfs.transfers !== nothing
         2 =&gt; &quot;Minimum time&quot;,
         3 =&gt; &quot;Not possible&quot;
     )
-    
+
     transfer_counts = Dict{Int, Int}()
     for row in eachrow(gtfs.transfers)
         transfer_type = get(row, :transfer_type, 0)
         transfer_counts[transfer_type] = get(transfer_counts, transfer_type, 0) + 1
     end
-    
+
     for (type_id, count) in sort(collect(transfer_counts))
         type_name = get(transfer_types, type_id, &quot;Unknown ($type_id)&quot;)
         println(&quot;$type_name: $count&quot;)
@@ -218,7 +225,7 @@ end</code></pre><h3 id="Fare-Analysis"><a class="docs-heading-anchor" href="#Far
 if gtfs.fare_attributes !== nothing
     println(&quot;=== Fare Analysis ===&quot;)
     println(&quot;Fare types: &quot;, nrow(gtfs.fare_attributes))
-    
+
     for row in eachrow(gtfs.fare_attributes)
         println(&quot;Fare: $(row.fare_id)&quot;)
         println(&quot;  Price: $(row.price)&quot;)
@@ -231,18 +238,18 @@ end</code></pre><h3 id="Shape-Analysis"><a class="docs-heading-anchor" href="#Sh
 if gtfs.shapes !== nothing
     println(&quot;=== Shape Analysis ===&quot;)
     println(&quot;Total shape points: &quot;, nrow(gtfs.shapes))
-    
+
     # Count shapes
     shape_ids = unique(gtfs.shapes.shape_id)
     println(&quot;Unique shapes: &quot;, length(shape_ids))
-    
+
     # Find longest shapes
     shape_lengths = Dict{String, Int}()
     for row in eachrow(gtfs.shapes)
         shape_id = row.shape_id
         shape_lengths[shape_id] = get(shape_lengths, shape_id, 0) + 1
     end
-    
+
     longest_shapes = sort(collect(shape_lengths), by=x-&gt;x[2], rev=true)[1:min(5, length(shape_lengths))]
     println(&quot;\nLongest shapes (by number of points):&quot;)
     for (shape_id, count) in longest_shapes
@@ -264,28 +271,28 @@ function create_summary_report(gtfs)
     report = &quot;&quot;&quot;
     GTFS Feed Summary Report
     ========================
-    
+
     Basic Statistics:
     - Agencies: $(nrow(gtfs.agency))
     - Stops: $(nrow(gtfs.stops))
     - Routes: $(nrow(gtfs.routes))
     - Trips: $(nrow(gtfs.trips))
     - Stop Times: $(nrow(gtfs.stop_times))
-    
+
     Route Types:
     &quot;&quot;&quot;
-    
+
     # Add route type breakdown
     route_counts = Dict{Int, Int}()
     for row in eachrow(gtfs.routes)
         route_type = row.route_type
         route_counts[route_type] = get(route_counts, route_type, 0) + 1
     end
-    
+
     for (type_id, count) in sort(collect(route_counts))
         report *= &quot;  - Type $type_id: $count routes\n&quot;
     end
-    
+
     # Add optional files status
     report *= &quot;\nOptional Files:\n&quot;
     optional_files = [
@@ -294,12 +301,12 @@ function create_summary_report(gtfs)
         (&quot;Shapes&quot;, gtfs.shapes),
         (&quot;Transfers&quot;, gtfs.transfers)
     ]
-    
+
     for (name, df) in optional_files
         status = df !== nothing ? &quot;Present&quot; : &quot;Not present&quot;
         report *= &quot;  - $name: $status\n&quot;
     end
-    
+
     return report
 end
 
@@ -329,11 +336,11 @@ println(&quot;Feed Info: &quot;, feed_info)</code></pre><h3 id="Handling-Missing
 function analyze_stop_coordinates(gtfs)
     valid_stops = 0
     invalid_stops = 0
-    
+
     for row in eachrow(gtfs.stops)
         lat = get(row, :stop_lat, missing)
         lon = get(row, :stop_lon, missing)
-        
+
         if ismissing(lat) || ismissing(lon)
             invalid_stops += 1
         elseif -90 &lt;= lat &lt;= 90 &amp;&amp; -180 &lt;= lon &lt;= 180
@@ -342,9 +349,9 @@ function analyze_stop_coordinates(gtfs)
             invalid_stops += 1
         end
     end
-    
+
     return (valid=valid_stops, invalid=invalid_stops)
 end
 
 coord_stats = analyze_stop_coordinates(gtfs)
-println(&quot;Stop coordinates: $(coord_stats.valid) valid, $(coord_stats.invalid) invalid&quot;)</code></pre><p>These examples demonstrate the flexibility and power of GTFS.jl for transit data analysis. The package&#39;s integration with DataFrames makes it easy to perform complex queries and transformations on GTFS data.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../api/">« API Reference</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.14.1 on <span class="colophon-date" title="Sunday 12 October 2025 19:41">Sunday 12 October 2025</span>. Using Julia version 1.12.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+println(&quot;Stop coordinates: $(coord_stats.valid) valid, $(coord_stats.invalid) invalid&quot;)</code></pre><p>These examples demonstrate the flexibility and power of GTFSSchedule.jl for transit data analysis. The package&#39;s integration with DataFrames makes it easy to perform complex queries and transformations on GTFS data.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../api/">« API Reference</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.15.0 on <span class="colophon-date" title="Friday 24 October 2025 17:08">Friday 24 October 2025</span>. Using Julia version 1.12.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
